@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Phaser - Millonario</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+    <style>
+        body { margin: 0; background-color: #222; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        /* Estilos básicos para los inputs de apuestas */
+        .bet-input {
+            width: 100px;
+            margin-left: 10px;
+            font-size: 16px;
+            padding: 5px;
+        }
+        .game-container div { /* Contenedor para el juego Phaser */
+            border: 3px solid #fff; /* Para visualizar el canvas del juego */
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container" class="game-container">
+        </div>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
