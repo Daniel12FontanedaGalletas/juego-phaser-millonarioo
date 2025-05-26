@@ -5,23 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego Phaser - Millonario</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
     <style>
-        body { margin: 0; background-color: #222; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        /* Estilos básicos para los inputs de apuestas */
+        body {
+            margin: 0;
+            background-color: #1a1a1a; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+        .game-container div { 
+            border: 3px solid #0d0d0d;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        /* Aplicar el cursor personalizado directamente al canvas del juego */
+        #game-container canvas {
+            /* Asegúrate de que 'cursorGauntlet_grey.png' está en 'assets/PNG/' */
+            /* Ajusta el hotspot (8 8) según sea necesario para tu imagen */
+            cursor: url('assets/PNG/cursorGauntlet_grey.png') 8 8, auto; 
+        }
         .bet-input {
             width: 100px;
             margin-left: 10px;
             font-size: 16px;
-            padding: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif; 
+            background-color: #f0f0f0;
+            color: #333;
         }
-        .game-container div { /* Contenedor para el juego Phaser */
-            border: 3px solid #fff; /* Para visualizar el canvas del juego */
+        .bet-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.5);
         }
     </style>
 </head>
 <body>
-    <div id="game-container" class="game-container">
-        </div>
+    <div id="game-container" class="game-container"></div>
     <script type="module" src="src/main.js"></script>
 </body>
 </html>

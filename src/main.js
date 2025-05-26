@@ -1,6 +1,6 @@
 // src/main.js
 import PreloadScene from './scenes/PreloadScene.js';
-import WelcomeScene from './scenes/WelcomeScene.js'; // Importar la nueva escena
+import WelcomeScene from './scenes/WelcomeScene.js';
 import GameScene from './scenes/GameScene.js';
 
 const config = {
@@ -18,9 +18,9 @@ const config = {
             debug: false
         }
     },
-    // PreloadScene será la primera, luego WelcomeScene, luego GameScene
     scene: [PreloadScene, WelcomeScene, GameScene], 
-    backgroundColor: '#333333'
+    backgroundColor: '#333333' // Color de fondo por defecto del canvas
 };
 
 const game = new Phaser.Game(config);
+console.log("Phaser Game instance created.");
