@@ -7,10 +7,8 @@ export default class PreloadScene extends Phaser.Scene {
     preload() {
         // Aquí cargarías tus assets
         // Ejemplo: this.load.image('background', 'assets/background.png');
-        // Ejemplo: this.load.audio('correctSound', 'assets/correct.mp3');
         console.log("PreloadScene: Preloading assets...");
 
-        // Barra de carga simple (opcional)
         let progressBar = this.add.graphics();
         let progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
@@ -25,8 +23,9 @@ export default class PreloadScene extends Phaser.Scene {
         this.load.on('complete', function () {
             progressBar.destroy();
             progressBox.destroy();
-            console.log("PreloadScene: Assets loaded, starting GameScene.");
-            this.scene.start('GameScene', { initialMoney: 1000000 }); // Pasa el dinero inicial a GameScene
+            console.log("PreloadScene: Assets loaded, starting WelcomeScene.");
+            // Cambiar a WelcomeScene
+            this.scene.start('WelcomeScene'); 
         }, this);
 
         // Simula carga si no hay assets
