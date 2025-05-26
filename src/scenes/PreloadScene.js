@@ -5,8 +5,6 @@ export default class PreloadScene extends Phaser.Scene {
     }
 
     preload() {
-        // Aquí cargarías tus assets
-        // Ejemplo: this.load.image('background', 'assets/background.png');
         console.log("PreloadScene: Preloading assets...");
 
         let progressBar = this.add.graphics();
